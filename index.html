@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator (Dark Mode)</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>💷 Tip Calculator</h2>
+
+    <label for="billAmount">Bill Amount (£):</label>
+    <input type="number" id="billAmount" placeholder="Enter bill amount" min="0">
+
+    <label for="tipPercent">Tip Percentage:</label>
+    <select id="tipPercent">
+      <option value="10">10%</option>
+      <option value="15" selected>15%</option>
+      <option value="20">20%</option>
+      <option value="custom">Custom</option>
+    </select>
+
+    <input type="number" id="customTip" placeholder="Enter custom tip (%)" min="0" style="display:none;">
+
+    <button id="calcBtn">Calculate Tip</button>
+
+    <div class="error" id="errorMsg"></div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <!-- Load JS file at the very end -->
+  <script src="script.js"></script>
+</body>
+</html>
